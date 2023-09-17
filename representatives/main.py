@@ -52,7 +52,7 @@ try:
         try:
             with open("./representatives/README.md", "w", encoding="utf-8") as file:
                 contents = f"""# Representatives List
-This is a list of member of the House of Representatives in the 26th paliament. List from ![parliament.go.th](https://hris.parliament.go.th/ss_th.php)
+This is a list of member of the House of Representatives in the 26th paliament. List from [parliament.go.th](https://hris.parliament.go.th/ss_th.php)
 | ID | Name | Image |
 | ---- | ------- | -------- |
 {markdown_content}
