@@ -45,12 +45,20 @@ try:
             return f"""
 | {item["ID"]} | {item["Name"]} | ![]({item["Image"]}) |
             """
+        
+        markdown_content = ""
+        for item in data:
+            markdown_content += mdData(item)
+
 
         try:
-            with open('./representatives/README.md', "w", encoding="utf-8") as file:
-                for item in data:
-                    mdContent = mdData(item)
-                    file.write(mdContent)
+            with open("./representatives/README.md", "w", encoding="utf-8") as file:
+                contents = f"""# Representatives List
+| ID | Name | Image |
+| ---- | ------- | -------- |
+            {markdown_content}
+            """
+                file.write(contents)
         except Exception as error:
             print(error)
 
