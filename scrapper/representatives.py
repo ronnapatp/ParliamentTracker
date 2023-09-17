@@ -18,8 +18,10 @@ def scrapeRepresentativeDetails(link):
             
             divElement = soup.find('div', class_='span3')
             
-            detailsText = divElement.text.strip()
-
+            for img in divElement.find_all('img'):
+                img.extract()
+            
+            detailsText = divElement.get_text(strip=True)
             print(detailsText)
             
             return detailsText
