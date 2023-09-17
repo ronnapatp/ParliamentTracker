@@ -42,9 +42,7 @@ try:
             print(error)
 
         def mdData(item):
-            return f"""
-| {item["ID"]} | {item["Name"]} | ![]({item["Image"]}) |
-            """
+            return f'| {item["ID"]} | {item["Name"]} | ![]({item["Image"]}) |\n'
         
         markdown_content = ""
         for item in data:
@@ -56,7 +54,7 @@ try:
                 contents = f"""# Representatives List
 | ID | Name | Image |
 | ---- | ------- | -------- |
-            {markdown_content}
+{markdown_content}
             """
                 file.write(contents)
         except Exception as error:
