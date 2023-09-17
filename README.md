@@ -1,3 +1,3 @@
-# Thailand Parliamentary Bill Tracker
+# Thailand Parliamentary Bills Tracker
 
 Using data from parliament's [Trello](https://trello.com/b/1LjIXpMK/สถานะร่างกฎหมาย-สสชุดที่-26)
