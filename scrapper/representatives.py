@@ -2,40 +2,73 @@ import requests
 from bs4 import BeautifulSoup
 import html
 import json
+import time  
 
-url = 'https://hris.parliament.go.th/ss_th.php'
+BASE_URL = 'https://hris.parliament.go.th/'
+URL = 'https://hris.parliament.go.th/ss_th.php'
 
 data = []
 
+def scrapeRepresentativeDetails(link):
+    try:
+        response = requests.get(link)
+        if response.status_code == 200:
+            htmlContent = response.content.decode('utf-8', errors='ignore')
+            soup = BeautifulSoup(htmlContent, 'html.parser')
+            
+            divElement = soup.find('div', class_='span3')
+            
+            detailsText = divElement.text.strip()
+            
+            return detailsText
+        else:
+            print(f"Failed to fetch details page. Status code: {response.status_code}")
+            return None
+    except requests.exceptions.RequestException as e:
+        print(f"An error occurred while fetching details: {str(e)}")
+        return None
+
 try:
-    response = requests.get(url)
+    response = requests.get(URL)
     if response.status_code == 200:
-        html_content = response.content.decode('utf-8', errors='ignore')
+        htmlContent = response.content.decode('utf-8', errors='ignore')
 
-        soup = BeautifulSoup(html_content, 'html.parser')
+        soup = BeautifulSoup(htmlContent, 'html.parser')
 
-        li_elements = soup.find_all('li')
+        liElements = soup.find_all('li')
 
-        for li in li_elements:
-            name_element = li.find('a', class_='sl_name')
-            id_element = li.find('span', class_='label label-info')
+        for idx, li in enumerate(liElements):
+            nameElement = li.find('a', class_='sl_name')
+            idElement = li.find('span', class_='label label-info')
+            linkElement = li.find('a', class_='sl_name')  # Find the <a> element within the <li>
 
-            name = name_element.text.strip()
-            idNum = id_element.text.strip()
-            decoded_name = html.unescape(name)
+            name = nameElement.text.strip()
+            idNum = idElement.text.strip()
+            decodedName = html.unescape(name)
 
-            img_element = li.find('img')
-            image_url = img_element['src']
+            imgElement = li.find('img')
+            imageURL = imgElement['src']
+
+            # Extract the link (href attribute) from the <a> element and prepend the base URL
+            link = BASE_URL + linkElement['href']
+
+            # Scrape details from the linked page
+            detailsText = scrapeRepresentativeDetails(link)
 
             data.append({
                 "ID": idNum.split()[2],
                 "Name": name,
-                "Image": image_url
+                "Image": imageURL,
+                "Link": link,
+                "Details": detailsText  
             })
 
+            if idx < len(liElements) - 1:
+                time.sleep(1)
+
         try:
-            with open('./data/representatives.json', 'w', encoding='utf-8') as output_file:
-                json.dump(data, output_file, ensure_ascii=False, indent=4)
+            with open('./data/representatives.json', 'w', encoding='utf-8') as outputFile:
+                json.dump(data, outputFile, ensure_ascii=False, indent=4)
             
             print('File saved')
         except Exception as error:
