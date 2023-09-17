@@ -11,9 +11,9 @@ data = []
 
 def scrapeRepresentativeDetails(link):
     try:
-        response = requests.get(link)
-        if response.status_code == 200:
-            htmlContent = response.content.decode('utf-8', errors='ignore')
+        responseInd = requests.get(link)
+        if responseInd.status_code == 200:
+            htmlContent = responseInd.content.decode('utf-8', errors='ignore')
             soup = BeautifulSoup(htmlContent, 'html.parser')
             
             divElement = soup.find('div', class_='span3')
@@ -31,9 +31,9 @@ def scrapeRepresentativeDetails(link):
         return None
 
 try:
-    response = requests.get(URL)
-    if response.status_code == 200:
-        htmlContent = response.content.decode('utf-8', errors='ignore')
+    responseMain = requests.get(URL)
+    if responseMain.status_code == 200:
+        htmlContent = responseMain.content.decode('utf-8', errors='ignore')
 
         soup = BeautifulSoup(htmlContent, 'html.parser')
 
