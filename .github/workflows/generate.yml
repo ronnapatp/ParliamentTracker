@@ -30,7 +30,7 @@ jobs:
           pip install requests
 
       - name: Generate Data
-        run: python ./format/index.py && python ./format/format.py
+        run: python ./scrapper/bills.py 
 
       - name: Check for Changes
         id: git-diff
