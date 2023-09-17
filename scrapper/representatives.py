@@ -19,6 +19,8 @@ def scrapeRepresentativeDetails(link):
             divElement = soup.find('div', class_='span3')
             
             detailsText = divElement.text.strip()
+
+            print(detailsText)
             
             return detailsText
         else:
