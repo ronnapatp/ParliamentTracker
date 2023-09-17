@@ -34,33 +34,12 @@ try:
             })
 
         try:
-            with open('./representatives/data.json', 'w', encoding='utf-8') as output_file:
+            with open('./data/representatives.json', 'w', encoding='utf-8') as output_file:
                 json.dump(data, output_file, ensure_ascii=False, indent=4)
             
             print('File saved')
         except Exception as error:
             print(error)
-
-        def mdData(item):
-            return f'| {item["ID"]} | {item["Name"]} | ![]({item["Image"]}) |\n'
-        
-        markdown_content = ""
-        for item in data:
-            markdown_content += mdData(item)
-
-
-        try:
-            with open("./representatives/README.md", "w", encoding="utf-8") as file:
-                contents = f"""# Representatives List
-This is a list of member of the House of Representatives in the 26th paliament. List from [parliament.go.th](https://hris.parliament.go.th/ss_th.php)
-| ID | Name | Image |
-| ---- | ------- | -------- |
-{markdown_content}
-            """
-                file.write(contents)
-        except Exception as error:
-            print(error)
-
 
     else:
         print(f"Failed to fetch HTML source code. Status code: {response.status_code}")

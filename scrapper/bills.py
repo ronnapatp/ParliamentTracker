@@ -1,18 +1,17 @@
 import json
+import requests
 
-input_file_path = './format/data/unformattedData.json'
-output_file_path = './format/data/formattaedData.json'  
+url = 'https://trello.com/b/1LjIXpMK.json'
 
-with open(input_file_path, 'r', encoding='utf-8') as file:
-    thai_json = file.read()
+response = requests.get(url)
+jsonContent = response.json()
 
-jsonF = json.loads(thai_json)
-
-filtered_data = []
+outputFilePath = "./data/bills.json"
+data = []
 
 unique_names = set()
 
-for action in jsonF.get("actions", []):
+for action in jsonContent.get("actions", []):
     card_data = action.get("data", {}).get("card", {})
     name = card_data.get("name", "N/A")
     des = card_data.get("desc", "N/A").splitlines(True)
@@ -21,7 +20,7 @@ for action in jsonF.get("actions", []):
 
     if name != "N/A" and name not in unique_names:
 
-        filtered_data.append({
+        data.append({
             "Name": name,
             "Purposer": des[0],
             "List": list_name,
@@ -30,7 +29,7 @@ for action in jsonF.get("actions", []):
 
         unique_names.add(name)
 
-with open(output_file_path, 'w', encoding='utf-8') as output_file:
-    json.dump(filtered_data, output_file, ensure_ascii=False, indent=4)
+with open(outputFilePath, 'w', encoding='utf-8') as output_file:
+    json.dump(data, output_file, ensure_ascii=False, indent=4)
 
-print(f"Filtered data has been written to {output_file_path}")
+print(f"Filtered data has been written to {outputFilePath}")
