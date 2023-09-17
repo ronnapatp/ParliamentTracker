@@ -41,6 +41,20 @@ try:
         except Exception as error:
             print(error)
 
+        def mdData(item):
+            return f"""
+| {item["ID"]} | {item["Name"]} | ![]({item["Image"]}) |
+            """
+
+        try:
+            with open('./representatives/README.md', "w", encoding="utf-8") as file:
+                for item in data:
+                    mdContent = mdData(item)
+                    file.write(mdContent)
+        except Exception as error:
+            print(error)
+
+
     else:
         print(f"Failed to fetch HTML source code. Status code: {response.status_code}")
 except requests.exceptions.RequestException as e:
