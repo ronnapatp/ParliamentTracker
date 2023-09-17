@@ -24,7 +24,7 @@ def scrapeRepresentativeDetails(link):
             
             return detailsText
         else:
-            print(f"Failed to fetch details page. Status code: {response.status_code}")
+            print(f"Failed to fetch details page. Status code: {responseInd.status_code}")
             return None
     except requests.exceptions.RequestException as e:
         print(f"An error occurred while fetching details: {str(e)}")
@@ -77,6 +77,6 @@ try:
             print(error)
 
     else:
-        print(f"Failed to fetch HTML source code. Status code: {response.status_code}")
+        print(f"Failed to fetch HTML source code. Status code: {responseMain.status_code}")
 except requests.exceptions.RequestException as e:
     print(f"An error occurred: {str(e)}")
