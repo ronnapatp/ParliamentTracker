@@ -23,7 +23,7 @@ for action in jsonF.get("actions", []):
 
         filtered_data.append({
             "Name": name,
-            "Description": des[0],
+            "Purposer": des[0],
             "List": list_name,
             "List After": list_after_name
         })
