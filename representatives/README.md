@@ -1,5 +1,5 @@
 # Representatives List
-This is a list of member of the House of Representatives in the 26th paliament. List from [parliament.go.th](https://hris.parliament.go.th/ss_th.php)
+This is a list of member of the House of Representatives in the 26th paliament. List from [parliament.go.th](https://hris.parliament.go.th/ss_th.php).
 | ID | Name | Image |
 | ---- | ------- | -------- |
 | 001 | นางสาวกมนทรรศน์  กิตติสุนทรสกุล | ![](http://hris.parliament.go.th/manage/fileupload/pic_new/3540100539076_3.png) |
