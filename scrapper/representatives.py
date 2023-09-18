@@ -22,7 +22,6 @@ def scrapeRepresentativeDetails(link):
                 img.extract()
             
             detailsText = divElement.get_text(strip=True)
-            print(detailsText)
             
             return detailsText
         else:
@@ -44,7 +43,7 @@ try:
         for idx, li in enumerate(liElements):
             nameElement = li.find('a', class_='sl_name')
             idElement = li.find('span', class_='label label-info')
-            linkElement = li.find('a', class_='sl_name')  # Find the <a> element within the <li>
+            linkElement = li.find('a', class_='sl_name') 
 
             name = nameElement.text.strip()
             idNum = idElement.text.strip()
@@ -53,18 +52,24 @@ try:
             imgElement = li.find('img')
             imageURL = imgElement['src']
 
-            # Extract the link (href attribute) from the <a> element and prepend the base URL
             link = BASE_URL + linkElement['href']
 
-            # Scrape details from the linked page
             detailsText = scrapeRepresentativeDetails(link)
+
+            if "แบบบัญชีรายชื่อ" in detailsText:
+                constituency = "บัญชีรายชื่อ"
+                party = detailsText[15:]
+            else:
+                constituency = detailsText.split()[0] + " เขต " + list(detailsText.split()[2])[0]
+                party = detailsText.split()[2][1:]
 
             data.append({
                 "ID": idNum.split()[2],
                 "Name": name,
                 "Image": imageURL,
                 "Link": link,
-                "Details": detailsText  
+                "Constituency": constituency,
+                "Party": party
             })
 
             if idx < len(liElements) - 1:
