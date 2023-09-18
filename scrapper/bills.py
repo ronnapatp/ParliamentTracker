@@ -23,13 +23,21 @@ for action in jsonContent.get("actions", []):
     list_name = action.get("data", {}).get("list", {}).get("name", "N/A")
     list_after_name = action.get("data", {}).get("listAfter", {}).get("name", "N/A")
 
+    status = ""
+
+    if list_name == "N/A":
+        status = list_after_name
+    elif list_after_name == "N/A":
+        status = list_name
+    else:
+        status = "Status Not Found"
+
     if name != "N/A" and name not in unique_names:
 
         data.append({
             "Name": name,
             "Purposer": des[0],
-            "List": list_name,
-            "List After": list_after_name
+            "Status": status
         })
 
         unique_names.add(name)
