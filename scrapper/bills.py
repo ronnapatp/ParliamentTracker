@@ -1,5 +1,6 @@
 import json
 import requests
+from time import ctime, time
 
 url = 'https://trello.com/b/1LjIXpMK.json'
 
@@ -7,7 +8,11 @@ response = requests.get(url)
 jsonContent = response.json()
 
 outputFilePath = "./data/bills.json"
-data = []
+data = [
+    {
+        "Latest update": ctime(time()),
+    }
+]
 
 unique_names = set()
 
