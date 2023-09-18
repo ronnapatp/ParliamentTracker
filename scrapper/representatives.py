@@ -54,9 +54,9 @@ try:
 
             link = BASE_URL + linkElement['href']
 
-            detailsText = scrapeRepresentativeDetails(link)
+            detailsText = str(scrapeRepresentativeDetails(link))
 
-            if "แบบบัญชีรายชื่อ" in str(detailsText):
+            if "แบบบัญชีรายชื่อ" in detailsText:
                 constituency = "บัญชีรายชื่อ"
                 party = detailsText[15:]
             else:
