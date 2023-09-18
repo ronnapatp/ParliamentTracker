@@ -33,13 +33,7 @@ jobs:
       - name: Generate Data
         run: python ./scrapper/representatives.py 
 
-      - name: Check for Changes
-        id: git-diff
-        run: |
-          git diff --exit-code || echo "Changes detected."
-
       - name: Commit Data
-        if: steps.git-diff.outputs.exit-code == 'Changes detected.'
         run: |
           git config --global user.email "potbye@users.noreply.github.com"
           git config --global user.name "potbye"
