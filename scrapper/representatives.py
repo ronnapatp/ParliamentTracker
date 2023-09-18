@@ -56,7 +56,7 @@ try:
 
             detailsText = scrapeRepresentativeDetails(link)
 
-            if "แบบบัญชีรายชื่อ" in detailsText:
+            if "แบบบัญชีรายชื่อ" in str(detailsText):
                 constituency = "บัญชีรายชื่อ"
                 party = detailsText[15:]
             else:
