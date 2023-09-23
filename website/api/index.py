@@ -1,5 +1,5 @@
 from typing import Union
-from fastapi import FastAPI, Query, HTTPException, HTMLResponse
+from fastapi import FastAPI, Query, HTTPException, HTMLResponse, Depends
 import requests
 
 app = FastAPI()
@@ -19,14 +19,9 @@ app = FastAPI(
     description="This is an API that are being scrapped from the parliament website and transform it into JSON file.",
     summary="Thailand's Parliament API",
     version="1.0.0",
-    docs_url="/api",
+    docs_url="/api/docs",
     root_path="/api/"
 )
-
-def create_api(app: FastAPI):
-    @app.get(app.root_path + "/openapi.json")
-    def custom_swagger_ui_html():
-        return app.openapi()
 
 @app.get("/api/representatives")
 def read_root(ID: Union[str, None] = Query(None, description="Representative ID filter"),
