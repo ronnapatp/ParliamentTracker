@@ -56,18 +56,17 @@ try:
             link = BASE_URL + linkElement['href']
 
             detailsText = str(scrapeRepresentativeDetails(link))
-            constituencyPattern = r'^(.*?) เขต (\d{1,2})(.*)$'
 
             if "แบบบัญชีรายชื่อ" in detailsText:
                 constituency = "บัญชีรายชื่อ"
-                party = detailsText[15:]
+                partyName = detailsText[15:]
                 constituencyNumber = "Party-list member"
-            else:
+            elif "จังหวัด" in detailsText:
+                constituencyPattern = r'^(.*?) เขต (\d{1,2})(.*)$'
                 match = re.search(constituencyPattern, detailsText)
                 constituency = match.group(1).strip()
                 constituencyNumber = match.group(2)
                 partyName = match.group(3).strip()
-
 
             data.append({
                 "ID": idNum.split()[2],
