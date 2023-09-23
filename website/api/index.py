@@ -20,7 +20,7 @@ app = FastAPI(
     summary="Thailand's Parliament API",
     version="1.0.0",
     docs_url="/api",
-    root_path="/api"
+    root_path="/api/"
 )
 
 
