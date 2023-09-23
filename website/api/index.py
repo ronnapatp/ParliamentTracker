@@ -20,7 +20,6 @@ app = FastAPI(
     summary="Thailand's Parliament API",
     version="1.0.0",
     docs_url="/api/docs",
-    root_path="/api/"
 )
 
 @app.get("/api/representatives")
