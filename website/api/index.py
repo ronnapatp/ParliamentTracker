@@ -2,8 +2,6 @@ from typing import Union
 from fastapi import FastAPI, Query, HTTPException, HTMLResponse, Depends
 import requests
 
-app = FastAPI()
-
 def thaiToUnicode(text):
     unicode_text = ''.join([f'\\u{ord(char):04x}' for char in text])
     return unicode_text
