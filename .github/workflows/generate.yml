@@ -31,7 +31,7 @@ jobs:
           pip install beautifulsoup4
 
       - name: Generate Data
-        run: python ./scrapper/bills.py 
+        run: python ./scrapper/representatives.py 
 
       - name: Commit Data
         run: |
