@@ -1,5 +1,5 @@
 from typing import Union
-from fastapi import FastAPI, Query, HTTPException
+from fastapi import FastAPI, Query, HTTPException, HTMLResponse
 import requests
 
 app = FastAPI()
@@ -23,6 +23,10 @@ app = FastAPI(
     root_path="/api/"
 )
 
+def create_api(app: FastAPI):
+    @app.get(app.root_path + "/openapi.json")
+    def custom_swagger_ui_html():
+        return app.openapi()
 
 @app.get("/api/representatives")
 def read_root(ID: Union[str, None] = Query(None, description="Representative ID filter"),
