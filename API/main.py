@@ -1,7 +1,6 @@
 from typing import Union
 from fastapi import FastAPI, Query, HTTPException
 import json
-import urllib.parse
 
 app = FastAPI()
 
