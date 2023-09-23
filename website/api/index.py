@@ -14,6 +14,15 @@ url = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTracker/main/data/r
 response = requests.get(url)
 fileContent = response.json()
 
+app = FastAPI(
+    title="Parliament API",
+    description="This is an API that are being scrapped from the parliament website and transform it into JSON file.",
+    summary="Thailand's Parliament API",
+    version="1.0.0",
+    docs_url="/api"
+)
+
+
 @app.get("/api/representatives")
 def read_root(ID: Union[str, None] = Query(None, description="Representative ID filter"),
                Party: Union[str, None] = Query(None, description="Representative party filter (Thai)")):
