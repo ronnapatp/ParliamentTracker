@@ -2668,7 +2668,7 @@
         "Name": "นายรอมฎอน  ปันจอร์",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/44f7b4c8d1ce416f718d874bb4d75ad4.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34351&lang=th",
-        "Constituency": "บัญชีรายชื่อ",
+        "Constituency": "จังหวัดอุตรดิตถ์",
         "Constituency District": "3",
         "Party": "พรรคเพื่อไทย"
     },
@@ -2677,17 +2677,17 @@
         "Name": "นางสาวรักชนก  ศรีนอก",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/06ab1dbf0cd0cc001f45e19080d48534.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=33962&lang=th",
-        "Constituency": "จังหวัดกรุงเทพมหานคร",
-        "Constituency District": "28",
-        "Party": "พรรคก้าวไกล"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "299",
         "Name": "นายรังสรรค์  มณีรัตน์",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/d0608f6aeafa7b56c692b4dec44b848a.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34189&lang=th",
-        "Constituency": "จังหวัดลำพูน",
-        "Constituency District": "2",
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
         "Party": "พรรคเพื่อไทย"
     },
     {
@@ -2695,53 +2695,53 @@
         "Name": "นายรังสิกร  ทิมาตฤกะ",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/eabf4d0abff0833683e33aae1306f70f.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34097&lang=th",
-        "Constituency": "จังหวัดบุรีรัมย์",
-        "Constituency District": "4",
-        "Party": "พรรคภูมิใจไทย"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "301",
         "Name": "นายรังสิมันต์  โรม",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/a35bd8ef480b22e1f43224f6a80490d1.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34339&lang=th",
-        "Constituency": "บัญชีรายชื่อ",
-        "Constituency District": "4",
-        "Party": "พรรคภูมิใจไทย"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "302",
         "Name": "นายรัชต์พงศ์  สร้อยสุวรรณ",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/e697354a406a43c23a763822026cc2af.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34029&lang=th",
-        "Constituency": "จังหวัดตาก",
-        "Constituency District": "2",
-        "Party": "พรรคก้าวไกล"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "303",
         "Name": "นางสาวรัชนก  สุขประเสริฐ",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/12c06518603dcf6345552855d8917afa.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34218&lang=th",
-        "Constituency": "จังหวัดสมุทรปราการ",
-        "Constituency District": "2",
-        "Party": "พรรคก้าวไกล"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "304",
         "Name": "นางรัชนี  พลซื่อ",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/6be1abfff150beccd2a2be1a0571b2bb.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34173&lang=th",
-        "Constituency": "จังหวัดร้อยเอ็ด",
+        "Constituency": "จังหวัดอุตรดิตถ์",
         "Constituency District": "3",
-        "Party": "พรรคพลังประชารัฐ"
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "305",
         "Name": "นายรัฐ  คลังแสง",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/314b2ce04e4cbe26e960b1f4041aeda4.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34151&lang=th",
-        "Constituency": "จังหวัดมหาสารคาม",
-        "Constituency District": "6",
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
         "Party": "พรรคเพื่อไทย"
     },
     {
@@ -2749,45 +2749,45 @@
         "Name": "นายราชิต  สุดพุ่ม",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/ed52faa670418b4c55c42cd22eb8479e.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34059&lang=th",
-        "Constituency": "จังหวัดนครศรีธรรมราช",
-        "Constituency District": "1",
-        "Party": "พรรคประชาธิปัตย์"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "307",
         "Name": "นางรำพูล  ตันติวณิชชานนท์",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/0cc5fec75a5ca14a089469d52f6b237f.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34292&lang=th",
-        "Constituency": "จังหวัดอุบลราชธานี",
-        "Constituency District": "9",
-        "Party": "พรรคไทยสร้างไทย"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "308",
         "Name": "นายรุ่งโรจน์  ทองศรี",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/1cee0c833caff588f934904b7c4d9466.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34102&lang=th",
-        "Constituency": "จังหวัดบุรีรัมย์",
-        "Constituency District": "9",
-        "Party": "พรรคภูมิใจไทย"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "309",
         "Name": "นายเรืองวิทย์  คูณวัฒนาพงษ์",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/9afca5b516eb038d1f9eabfcbb82a559.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34255&lang=th",
-        "Constituency": "จังหวัดสุรินทร์",
-        "Constituency District": "7",
-        "Party": "พรรคภูมิใจไทย"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "310",
         "Name": "นายฤกษ์  อยู่ดี",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/f14a171fee7964eef201ac094215917b.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34315&lang=th",
-        "Constituency": "จังหวัดเพชรบุรี",
-        "Constituency District": "2",
-        "Party": "พรรคภูมิใจไทย"
+        "Constituency": "จังหวัดอุตรดิตถ์",
+        "Constituency District": "3",
+        "Party": "พรรคเพื่อไทย"
     },
     {
         "ID": "311",
@@ -3757,7 +3757,7 @@
         "Name": "นายสิทธิพล  วิบูลย์ธนากุล",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/845c11c4fbae657f788b0ba5400a2b1e.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34340&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
+        "Constituency": "บัญชีรายชื่อ",
         "Constituency District": "1",
         "Party": "พรรคเพื่อไทย"
     },
@@ -3766,80 +3766,80 @@
         "Name": "พันโท สินธพ  แก้วพิจิตร",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/a7b804a257706f0377c3b63a76a1f0b1.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34034&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Constituency": "จังหวัดนครปฐม",
+        "Constituency District": "2",
+        "Party": "พรรครวมไทยสร้างชาติ"
     },
     {
         "ID": "420",
         "Name": "นายสิริน  สงวนสิน",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new/1101402029702_2.jpg",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=84&ssp_id=33965&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Constituency": "จังหวัดกรุงเทพมหานคร",
+        "Constituency District": "31",
+        "Party": "พรรคก้าวไกล"
     },
     {
         "ID": "421",
         "Name": "นางสาวสิริลภัส  กองตระการ",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/7c44af0b11dc009c73a7f00ecc1f51eb.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=33948&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Constituency": "จังหวัดกรุงเทพมหานคร",
+        "Constituency District": "14",
+        "Party": "พรรคก้าวไกล"
     },
     {
         "ID": "422",
         "Name": "นางสุขสมรวย  วันทนียกุล",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/114f87369d48170bf20d4af1bb46ab72.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34267&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
+        "Constituency": "จังหวัดอำนาจเจริญ",
         "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Party": "พรรคภูมิใจไทย"
     },
     {
         "ID": "423",
         "Name": "นายสุชาติ  ชมกลิ่น",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/0235f01170619d76b93c0c4e642e1750.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34404&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
+        "Constituency": "บัญชีรายชื่อ",
         "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Party": "พรรคภูมิใจไทย"
     },
     {
         "ID": "424",
         "Name": "นายสุชาติ  ตันเจริญ",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/589b6fb45645fdc7bb967dfdb032d9d7.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34378&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
+        "Constituency": "บัญชีรายชื่อ",
         "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Party": "พรรคภูมิใจไทย"
     },
     {
         "ID": "425",
         "Name": "นางสาวสุณัฐชา  โล่สถาพรพิพิธ",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/92d5438b67d8e68f1c0f5bd3e2f254ee.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34025&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Constituency": "จังหวัดตรัง",
+        "Constituency District": "3",
+        "Party": "พรรคประชาธิปัตย์"
     },
     {
         "ID": "426",
         "Name": "นายฐากร  ตัณฑสิทธิ์",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new/3460300003227_2.jpg",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=84&ssp_id=34455&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Constituency": "บัญชีรายชื่อ",
+        "Constituency District": "3",
+        "Party": "พรรคประชาธิปัตย์"
     },
     {
         "ID": "427",
         "Name": "นางสาวสุดารัตน์  พิทักษ์พรพัลลภ",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new/1349900776301_2.jpg",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=84&ssp_id=34290&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
+        "Constituency": "จังหวัดอุบลราชธานี",
+        "Constituency District": "7",
         "Party": "พรรคเพื่อไทย"
     },
     {
@@ -3847,8 +3847,8 @@
         "Name": "นางสาวสุดาวรรณ  หวังศุภกิจโกศล",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/905c2850de0216892a4919294bd8094d.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34391&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
+        "Constituency": "บัญชีรายชื่อ",
+        "Constituency District": "7",
         "Party": "พรรคเพื่อไทย"
     },
     {
@@ -3856,27 +3856,27 @@
         "Name": "นายสุทธิชัย  จรูญเนตร",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/5de7690773f98afde3ae956824a2e806.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34288&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Constituency": "จังหวัดอุบลราชธานี",
+        "Constituency District": "5",
+        "Party": "พรรคภูมิใจไทย"
     },
     {
         "ID": "430",
         "Name": "นายสุทิน  คลังแสง",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/2717f2f669a2d0bc6cd771a325b93336.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34379&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Constituency": "บัญชีรายชื่อ",
+        "Constituency District": "5",
+        "Party": "พรรคภูมิใจไทย"
     },
     {
         "ID": "431",
         "Name": "นายสุธรรม  จริตงาม",
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/a0ee51e47f244b198acd33c3f7e4b5db.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34064&lang=th",
-        "Constituency": "จังหวัดลพบุรี",
-        "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Constituency": "จังหวัดนครศรีธรรมราช",
+        "Constituency District": "6",
+        "Party": "พรรคพลังประชารัฐ"
     },
     {
         "ID": "432",
@@ -3884,8 +3884,8 @@
         "Image": "http://hris.parliament.go.th/manage/fileupload/pic_new_public/89391f09ba8c6ee4bae2fad7075c8ada.png",
         "Link": "https://hris.parliament.go.th/ss_detail.php?sapa_id=&ssp_id=34398&lang=th",
         "Constituency": "บัญชีรายชื่อ",
-        "Constituency District": "1",
-        "Party": "พรรคเพื่อไทย"
+        "Constituency District": "6",
+        "Party": "พรรคพลังประชารัฐ"
     },
     {
         "ID": "433",
