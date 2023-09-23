@@ -19,7 +19,8 @@ app = FastAPI(
     description="This is an API that are being scrapped from the parliament website and transform it into JSON file.",
     summary="Thailand's Parliament API",
     version="1.0.0",
-    docs_url="/api"
+    docs_url="/api",
+    root_path="/api"
 )
 
 
@@ -43,5 +44,5 @@ def read_root(ID: Union[str, None] = Query(None, description="Representative ID 
         return filteredMemberParty
     return fileContent
 
-
+# @app.get("/api/bills")
 
