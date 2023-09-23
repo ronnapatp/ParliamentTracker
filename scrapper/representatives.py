@@ -63,6 +63,7 @@ try:
             if "แบบบัญชีรายชื่อ" in detailsText:
                 constituency = "บัญชีรายชื่อ"
                 party = detailsText[15:]
+                constituencyNumber = "Party-list member"
             elif match:
                 constituency = match.group(1).strip()
                 constituencyNumber = match.group(2)
