@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import html
 import json
 import time  
+import re
 
 BASE_URL = 'https://hris.parliament.go.th/'
 URL = 'https://hris.parliament.go.th/ss_th.php'
@@ -55,13 +56,18 @@ try:
             link = BASE_URL + linkElement['href']
 
             detailsText = str(scrapeRepresentativeDetails(link))
+            constituencyPattern = r'^(.*?) เขต (\d{1,2})(.*)$'
+
+            match = re.search(constituencyPattern, detailsText)
 
             if "แบบบัญชีรายชื่อ" in detailsText:
                 constituency = "บัญชีรายชื่อ"
                 party = detailsText[15:]
-            else:
-                constituency = detailsText.split()[0] + " เขต " + list(detailsText.split()[2])[0]
-                party = detailsText.split()[2][1:]
+            elif match:
+                constituency = match.group(1).strip()
+                constituencyNumber = match.group(2)
+                partyName = match.group(3).strip()
+
 
             data.append({
                 "ID": idNum.split()[2],
@@ -69,8 +75,11 @@ try:
                 "Image": imageURL,
                 "Link": link,
                 "Constituency": constituency,
-                "Party": party
+                "Constituency District": constituencyNumber,
+                "Party": partyName
             })
+
+            print(idx)
 
             if idx < len(liElements) - 1:
                 time.sleep(1)
