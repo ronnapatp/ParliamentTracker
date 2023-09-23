@@ -62,7 +62,7 @@ try:
                 constituency = "บัญชีรายชื่อ"
                 party = detailsText[15:]
                 constituencyNumber = "Party-list member"
-            elif match:
+            else:
                 match = re.search(constituencyPattern, detailsText)
                 constituency = match.group(1).strip()
                 constituencyNumber = match.group(2)
