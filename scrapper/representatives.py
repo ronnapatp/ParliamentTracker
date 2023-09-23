@@ -58,13 +58,12 @@ try:
             detailsText = str(scrapeRepresentativeDetails(link))
             constituencyPattern = r'^(.*?) เขต (\d{1,2})(.*)$'
 
-            match = re.search(constituencyPattern, detailsText)
-
             if "แบบบัญชีรายชื่อ" in detailsText:
                 constituency = "บัญชีรายชื่อ"
                 party = detailsText[15:]
                 constituencyNumber = "Party-list member"
             elif match:
+                match = re.search(constituencyPattern, detailsText)
                 constituency = match.group(1).strip()
                 constituencyNumber = match.group(2)
                 partyName = match.group(3).strip()
