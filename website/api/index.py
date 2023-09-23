@@ -12,9 +12,7 @@ url = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTracker/main/data/r
 response = requests.get(url)
 fileContent = response.json()
 
-app = FastAPI(
-    docs_url="/api/docs",
-)
+app = FastAPI()
 
 @app.get("/api/representatives")
 def read_root(ID: Union[str, None] = Query(None, description="Representative ID filter"),
@@ -35,6 +33,3 @@ def read_root(ID: Union[str, None] = Query(None, description="Representative ID 
             raise HTTPException(status_code=404, detail="Members not found")
         return filteredMemberParty
     return fileContent
-
-# @app.get("/api/bills")
-
