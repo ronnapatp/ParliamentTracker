@@ -1,6 +1,8 @@
 from typing import Union
-from fastapi import FastAPI, Query, HTTPException, HTMLResponse, Depends
+from fastapi import FastAPI, Query, HTTPException
 import requests
+
+app = FastAPI()
 
 def thaiToUnicode(text):
     unicode_text = ''.join([f'\\u{ord(char):04x}' for char in text])
@@ -11,8 +13,6 @@ url = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTracker/main/data/r
 
 response = requests.get(url)
 fileContent = response.json()
-
-app = FastAPI()
 
 @app.get("/api/representatives")
 def read_root(ID: Union[str, None] = Query(None, description="Representative ID filter"),
