@@ -46,9 +46,9 @@ try:
             idElement = li.find('span', class_='label label-info')
             linkElement = li.find('a', class_='sl_name') 
 
-            name = nameElement.text.strip()
+            nameOriginal = nameElement.text.strip()
+            nameFormatted = re.sub(f"\s+", " ", nameOriginal)
             idNum = idElement.text.strip()
-            decodedName = html.unescape(name)
 
             imgElement = li.find('img')
             imageURL = imgElement['src']
@@ -58,24 +58,27 @@ try:
             detailsText = str(scrapeRepresentativeDetails(link))
 
             if "แบบบัญชีรายชื่อ" in detailsText:
-                constituency = "บัญชีรายชื่อ"
-                partyName = detailsText[15:]
+                constituencyOriginal = "บัญชีรายชื่อ"
+                partyNameOriginal = detailsText[15:]
                 constituencyNumber = "Party-list member"
             elif "จังหวัด" in detailsText:
                 constituencyPattern = r'^(.*?) เขต (\d{1,2})(.*)$'
                 match = re.search(constituencyPattern, detailsText)
-                constituency = match.group(1).strip()
+                constituencyOriginal = match.group(1).strip()
                 constituencyNumber = match.group(2)
-                partyName = match.group(3).strip()
+                partyNameOriginal = match.group(3).strip()
 
+            partyName = partyNameOriginal.replace("พรรค", "")
+            constituency = constituencyOriginal.replace("จังหวัด","")
+            
             data.append({
-                "ID": idNum.split()[2],
-                "Name": name,
-                "Image": imageURL,
-                "Link": link,
-                "Constituency": constituency,
-                "Constituency District": constituencyNumber,
-                "Party": partyName
+                "id": idNum.split()[2],
+                "name": nameFormatted,
+                "image": imageURL,
+                "link": link,
+                "constituency": constituency,
+                "district": int(constituencyNumber) if "จังหวัด" in detailsText else constituencyNumber,
+                "party": partyName
             })
 
             print(idx)
