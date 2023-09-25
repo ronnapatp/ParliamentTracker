@@ -9,16 +9,15 @@ def thaiToUnicode(text):
     return unicode_text
 
 
-url = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTracker/main/data/representatives.json'
-
-response = requests.get(url)
-fileContent = response.json()
+representativesUrl = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTracker/main/data/representatives.json'
+representativesResponse = requests.get(representativesUrl)
+representativesContent = representativesResponse.json()
 
 @app.get("/api/representatives")
 def read_root(ID: Union[str, None] = Query(None, description="Representative ID filter"),
                Party: Union[str, None] = Query(None, description="Representative party filter (Thai)")):
     if ID:
-        filteredMemberID = [member for member in fileContent if member.get("ID") == ID]
+        filteredMemberID = [member for member in representativesContent if member.get("ID") == ID]
         if not filteredMemberID:
             raise HTTPException(status_code=404, detail="Member not found")
         return filteredMemberID
@@ -26,10 +25,18 @@ def read_root(ID: Union[str, None] = Query(None, description="Representative ID 
         print(f"Searching for party: {Party}")
         unicodePartyName = thaiToUnicode(Party)  
         print(unicodePartyName)
-        filteredMemberParty = [member for member in fileContent if
+        filteredMemberParty = [member for member in representativesContent if
                                thaiToUnicode(member.get("Party", "")).strip() == unicodePartyName]
         print(f"Found {len(filteredMemberParty)} members.")
         if not filteredMemberParty:
             raise HTTPException(status_code=404, detail="Members not found")
         return filteredMemberParty
-    return fileContent
+    return representativesContent
+
+billsUrl = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTracker/main/data/bills.json'
+billsResponse = requests.get(billsUrl)
+billsContent = billsResponse.json()
+
+@app.get("/api/bills")
+def read_root():
+    return billsContent
