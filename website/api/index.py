@@ -2,7 +2,27 @@ from typing import Union
 from fastapi import FastAPI, Query, HTTPException
 import requests
 
-app = FastAPI(docs_url="/api", redoc_url=None, openapi_url="/api/openapi.json")
+description = """
+
+## Members
+
+List of the member of the parliament, including representatives and senators
+
+## Bills
+
+Tracking bills in the parliament
+
+"""
+
+app = FastAPI(
+    docs_url="/api",
+    redoc_url=None,
+    openapi_url="/api/openapi.json",
+    title="Parliament Tracker API",
+    description=description,
+    summary="All APIs about Thailand's Parliament",
+    version="0.0.1",
+    )
 
 
 def thaiToUnicode(text):
