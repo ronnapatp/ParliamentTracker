@@ -14,6 +14,17 @@ Tracking bills in the parliament
 
 """
 
+tagsMetadata = [
+    {
+        "name": "Members",
+        "description": "Member of The Parliament of Thailand (Representatives and Senators)",
+    },
+    {
+        "name": "Bills",
+        "description": "Bills status in Thailand's parliament",
+    },
+]
+
 app = FastAPI(
     docs_url="/api",
     redoc_url=None,
@@ -22,7 +33,7 @@ app = FastAPI(
     description=description,
     summary="All APIs about Thailand's Parliament",
     version="0.0.1",
-    )
+)
 
 
 def thaiToUnicode(text):
@@ -34,7 +45,7 @@ representativesUrl = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTrac
 representativesResponse = requests.get(representativesUrl)
 representativesContent = representativesResponse.json()
 
-@app.get("/api/representatives")
+@app.get("/api/representatives", tags=["Members"])
 def read_root(ID: Union[str, None] = Query(None, description="Representative ID filter"),
                Party: Union[str, None] = Query(None, description="Representative party filter (Thai)")):
     if ID:
@@ -58,6 +69,6 @@ billsUrl = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTracker/main/d
 billsResponse = requests.get(billsUrl)
 billsContent = billsResponse.json()
 
-@app.get("/api/bills")
+@app.get("/api/bills", tags=["Bills"])
 def read_root():
     return billsContent
