@@ -2,7 +2,7 @@ from typing import Union
 from fastapi import FastAPI, Query, HTTPException
 import requests
 
-app = FastAPI(docs_url="/documentation", redoc_url=None, openapi_url="/api/v1/openapi.json")
+app = FastAPI(docs_url="/api", redoc_url=None, openapi_url="/api/openapi.json")
 
 
 def thaiToUnicode(text):
