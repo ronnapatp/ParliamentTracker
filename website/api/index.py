@@ -1,6 +1,6 @@
 from typing import Union
 from fastapi import FastAPI, Query, HTTPException
-import requests, json
+import requests
 
 
 tagsMetadata = [
@@ -34,8 +34,7 @@ def thaiToUnicode(text):
 
 representativesUrl = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTracker/main/data/representatives.json'
 representativesResponse = requests.get(representativesUrl)
-with open("../../data/representatives.json", "r") as json_file:
-    representativesContent = json.load(json_file)
+representativesContent = representativesResponse.json()
 
 @app.get("/api/representatives", tags=["Members"], name="Return a list of lower house members")
 def read_root():
