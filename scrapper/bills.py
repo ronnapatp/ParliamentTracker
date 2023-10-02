@@ -1,16 +1,21 @@
 import json
 import requests
-from time import ctime, time
+import pytz, time, datetime
 
 url = 'https://trello.com/b/1LjIXpMK.json'
 
 response = requests.get(url)
 jsonContent = response.json()
 
+thailandTimeZone = pytz.timezone("Asia/Bangkok")
+utcDateTime = datetime.datetime.utcfromtimestamp(time.time())
+localizedDatetime = utcDateTime.replace(tzinfo=pytz.utc).astimezone(thailandTimeZone)
+formattedTime = localizedDatetime.strftime('%Y-%m-%d %H:%M:%S %Z')
+
 outputFilePath = "./data/bills.json"
 data = [
     {
-        "Latest update": ctime(time()),
+        "Latest update": formattedTime,
     }
 ]
 
