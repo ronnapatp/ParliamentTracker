@@ -39,9 +39,11 @@ for action in jsonContent.get("actions", []):
 
     if name != "N/A" and name not in unique_names:
 
+        purposer = des[0].replace("ผู้เสนอ","").replace("\n","")
+
         data.append({
             "Name": name,
-            "Purposer": des[0],
+            "Purposer": purposer,
             "Status": status
         })
 
