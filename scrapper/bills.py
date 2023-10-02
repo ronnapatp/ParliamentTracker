@@ -28,14 +28,34 @@ for action in jsonContent.get("actions", []):
     list_name = action.get("data", {}).get("list", {}).get("name", "N/A")
     list_after_name = action.get("data", {}).get("listAfter", {}).get("name", "N/A")
 
-    status = ""
+    stage = ""
+
+    allStages = {
+        "ขอยืนยันร่าง พ.ร.บ. ค้างสภาก่อน": "billsFromTheLastParliamentaryTerm",
+        "การริเริ่มเสนอร่าง": "",
+        "การร่วมเสนอร่าง": "",
+        "รอวินิจฉัยการเงิน": "waitingForTheFinancialBillOrNotDecision",
+        "ไม่เป็นร่างการเงิน /รับฟังความคิดเห็น": "notAFinancialBillAndCurrentlyListeningToThePublic",
+        "เป็นร่างการเงิน/ส่ง นรม. ให้คำรับรอง/รับฟังความคิดเห็น": "",
+        "รอเข้าบรรจุวาระ": "waitingForTheSchedule",
+        "สส.วาระ 1": "representativesFirstReading",
+        "สส.วาระ 2": "representativesSecondReading",
+        "สส.วาระ 3": "representativesThirdReading",
+        "สว.วาระ 1": "senatorsFirstReading",
+        "สว.วาระ 2": "senatorsSecondReading",
+        "สว.วาระ 3": "senatorsThirdReading",
+        "ทูลเกล้าพิจารณา": "considerationFromHisMajesty",
+        "ประกาศราชกิจจา (Gazette)": "royalGazette",
+        "ที่ประชุมมีมติถอนร่าง พ.ร.บ.ออกจากระเบียบวาระฯ": "",
+        "ร่างพรบ.ค้าง สภา ที่ตกไปตาม ม.147 ของรัฐธรรมนูญ": "dropBillsFromTheLastParliamentaryTermByTheSection147OfTheConstitution"
+    }
 
     if list_name == "N/A":
-        status = list_after_name
+        stage = list_after_name
     elif list_after_name == "N/A":
-        status = list_name
+        stage = list_name
     else:
-        status = "Status Not Found"
+        stage = "Stage Not Found"
 
     if name != "N/A" and name not in unique_names:
 
@@ -44,7 +64,7 @@ for action in jsonContent.get("actions", []):
         data.append({
             "Name": name,
             "Purposer": purposer,
-            "Status": status
+            "Status": stage
         })
 
         unique_names.add(name)
