@@ -1,6 +1,7 @@
 from typing import Union
 from fastapi import FastAPI, Query, HTTPException
-import requests
+import requests, json
+
 
 tagsMetadata = [
     {
@@ -20,8 +21,10 @@ app = FastAPI(
     title="Parliament Tracker API",
     summary="All APIs about Thailand's Parliament",
     version="0.0.1",
+    swagger_ui_parameters={
+        "syntaxHighlight.theme":"obsidian"
+    },
 )
-
 
 def thaiToUnicode(text):
     unicode_text = ''.join([f'\\u{ord(char):04x}' for char in text])
@@ -31,7 +34,8 @@ def thaiToUnicode(text):
 
 representativesUrl = 'https://raw.githubusercontent.com/ronnapatp/ParliamentTracker/main/data/representatives.json'
 representativesResponse = requests.get(representativesUrl)
-representativesContent = representativesResponse.json()
+with open("../../data/representatives.json", "r") as json_file:
+    representativesContent = json.load(json_file)
 
 @app.get("/api/representatives", tags=["Members"], name="Return a list of lower house members")
 def read_root():
