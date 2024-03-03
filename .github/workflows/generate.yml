@@ -1,43 +1,43 @@
-name: Generate Json
+# name: Generate Json
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-  schedule:
-    - cron: '*/30 * * * *'
+# on:
+#   push:
+#     branches:
+#       - main
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '*/30 * * * *'
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.7]
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         python-version: [3.7]
 
-    steps:
-      - uses: actions/checkout@v2
+#     steps:
+#       - uses: actions/checkout@v2
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
+#       - name: Set up Python ${{ matrix.python-version }}
+#         uses: actions/setup-python@v2
+#         with:
+#           python-version: ${{ matrix.python-version }}
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
-          pip install beautifulsoup4
-          pip install pytz
+#       - name: Install dependencies
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install requests
+#           pip install beautifulsoup4
+#           pip install pytz
 
-      - name: Generate Data
-        run: python ./scrapper/bills.py 
+#       - name: Generate Data
+#         run: python ./scrapper/bills.py 
 
-      - name: Commit Data
-        run: |
-          git config --global user.email "potbye@users.noreply.github.com"
-          git config --global user.name "potbye"
-          git add .
-          git commit -am "Update data"
-          git push --all -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
+#       - name: Commit Data
+#         run: |
+#           git config --global user.email "potbye@users.noreply.github.com"
+#           git config --global user.name "potbye"
+#           git add .
+#           git commit -am "Update data"
+#           git push --all -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
